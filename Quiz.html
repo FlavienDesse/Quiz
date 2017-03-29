@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html"; >
+<meta charset="UTF-8">
+<title>Quizz !</title>
+   <link rel="stylesheet" type="text/css" href="Quizz.css" />
+</head>
+  <body>
+  <div class="quizz">
+ <h1 id="question"> Alan Turing n'est pas </h1>
+ 
+<input type="button" id="reponse_1" class="bouton"> 
+<input type="button" id="reponse_3" class="bouton"> 
+<input type="button" id="reponse_4" class="bouton"> 
+<input type="button" id="reponse_2" class="bouton"> 
+ <div id="fin" > </div>
+ <div class="bouton_suivant" > <input value="Suivant" onclick="Suivant ()"  type="button" id="suivant" >  </input></div>
+ 
+
+
+	<script type="text/javascript">
+
+var question_2 = "Qu'a fait Alan Turing pour contrer ENIGMA ?"
+var question_3="C'est quoi ENIGMA ?"
+var question_4="Pour qui travaillais Alan Turing ?"
+var question_5="Quand a t-il été reconnu par son pays ?"
+var question_6="Qui a crée ENIGMA ?"
+var question_7="Quel est la technique utilisé par ENIGMA ?"
+var question_8="Quel test a été crée par Alan Turing ?"
+var question_9="Combien une machine ENIGMA de base a de rotor ?"
+var question_10="Combien un rotor peut avoir de positions differentes ?"
+var verifier = 1
+var bonne_reponse = 0
+
+document.getElementById("reponse_1").value="Un journaliste"
+document.getElementById("reponse_2").value="Un mathematicien"
+document.getElementById("reponse_3").value="Un cryptologue"
+document.getElementById("reponse_4").value="Un fondeur de l'informatique"
+
+document.getElementById("reponse_1").addEventListener("click", Bon);
+document.getElementById("reponse_2").addEventListener("click", Faux);
+document.getElementById("reponse_3").addEventListener("click", Faux);
+document.getElementById("reponse_4").addEventListener("click", Faux);
+
+
+function Faux () {
+
+document.getElementById("reponse_1").removeEventListener("click", Faux);
+document.getElementById("reponse_2").removeEventListener("click", Faux);
+document.getElementById("reponse_3").removeEventListener("click", Faux);
+document.getElementById("reponse_4").removeEventListener("click",Faux);
+
+
+document.getElementById("reponse_1").removeEventListener("click",Bon);
+document.getElementById("reponse_2").removeEventListener("click", Bon);
+document.getElementById("reponse_3").removeEventListener("click", Bon);
+document.getElementById("reponse_4").removeEventListener("click",Bon);
+
+
+
+if (verifier == 10) 
+{
+ document.getElementById("reponse_1").style.backgroundColor="red"
+ document.getElementById("reponse_2").style.backgroundColor="red"
+ document.getElementById("reponse_3").style.backgroundColor="green"
+ document.getElementById("reponse_4").style.backgroundColor="red"
+ verifier ++;
+}
+if (verifier == 9) 
+{
+ document.getElementById("reponse_1").style.backgroundColor="red"
+ document.getElementById("reponse_2").style.backgroundColor="red"
+ document.getElementById("reponse_3").style.backgroundColor="red"
+ document.getElementById("reponse_4").style.backgroundColor="green"
+ verifier ++;
+}
+if (verifier == 8) 
+{
+ document.getElementById("reponse_1").style.backgroundColor="red"
+ document.getElementById("reponse_2").style.backgroundColor="green"
+ document.getElementById("reponse_3").style.backgroundColor="red"
+ document.getElementById("reponse_4").style.backgroundColor="red"
+ verifier ++;
+}
+if (verifier == 7) 
+{
+ document.getElementById("reponse_1").style.backgroundColor="red"
+ document.getElementById("reponse_2").style.backgroundColor="red"
+ document.getElementById("reponse_3").style.backgroundColor="red"
+ document.getElementById("reponse_4").style.backgroundColor="green"
+ verifier ++;
+}
+if (verifier == 6) 
+{
+ document.getElementById("reponse_1").style.backgroundColor="red"
+ document.getElementById("reponse_2").style.backgroundColor="green"
+ document.getElementById("reponse_3").style.backgroundColor="red"
+ document.getElementById("reponse_4").style.backgroundColor="red"
+ verifier ++;
+}
+if (verifier == 5) 
+{
+ document.getElementById("reponse_1").style.backgroundColor="green"
+ document.getElementById("reponse_2").style.backgroundColor="red"
+ document.getElementById("reponse_3").style.backgroundColor="red"
+ document.getElementById("reponse_4").style.backgroundColor="red"
+ verifier ++;
+}
+if (verifier == 4) 
+{
+ document.getElementById("reponse_1").style.backgroundColor="red"
+ document.getElementById("reponse_2").style.backgroundColor="red"
+ document.getElementById("reponse_3").style.backgroundColor="red"
+ document.getElementById("reponse_4").style.backgroundColor="green"
+ verifier ++;
+}
+if (verifier == 3) 
+{
+ document.getElementById("reponse_1").style.backgroundColor="red"
+ document.getElementById("reponse_2").style.backgroundColor="red"
+ document.getElementById("reponse_3").style.backgroundColor="green"
+ document.getElementById("reponse_4").style.backgroundColor="red"
+ verifier ++;
+}
+if (verifier == 2) 
+{
+ document.getElementById("reponse_1").style.backgroundColor="green"
+ document.getElementById("reponse_2").style.backgroundColor="red"
+ document.getElementById("reponse_3").style.backgroundColor="red"
+ document.getElementById("reponse_4").style.backgroundColor="red"
+ verifier ++;
+}
+if (verifier == 1) 
+{
+ document.getElementById("reponse_1").style.backgroundColor="green"
+ document.getElementById("reponse_2").style.backgroundColor="red"
+ document.getElementById("reponse_3").style.backgroundColor="red"
+ document.getElementById("reponse_4").style.backgroundColor="red"
+ verifier ++;
+}
+
+
+
+
+
+
+
+
+}
+
+function Bon (){
+bonne_reponse ++
+Faux ()
+}
+
+
+
+
+function Suivant (){
+
+ document.getElementById("reponse_1").style.backgroundColor="#dcdcdc" 
+ document.getElementById("reponse_2").style.backgroundColor="#dcdcdc"
+ document.getElementById("reponse_3").style.backgroundColor="#dcdcdc"
+ document.getElementById("reponse_4").style.backgroundColor="#dcdcdc"
+
+
+if (verifier == 11) 
+{
+ 
+ document.getElementById("question").style.display="none"
+ document.getElementById("reponse_1").style.display="none"
+ document.getElementById("reponse_2").style.display="none"
+ document.getElementById("reponse_3").style.display="none"
+ document.getElementById("reponse_4").style.display="none"
+ document.getElementById("fin").innerHTML="Vous avez " + bonne_reponse + " bonnes réponses"
+ document.getElementById("fin").style.display="block"
+ document.getElementById("suivant").addEventListener("click", function recommencer () { javascript:location.reload()  });
+ document.getElementById("suivant").value="Recommencer"
+} 
+
+if (verifier == 10) {
+document.getElementById("question").innerHTML=question_10
+document.getElementById("reponse_1").value="13"
+document.getElementById("reponse_2").value="24"
+document.getElementById("reponse_3").value="Le nombre de lettres de l'alphabet"
+document.getElementById("reponse_4").value="1945"
+
+document.getElementById("reponse_1").addEventListener("click", Faux);
+document.getElementById("reponse_2").addEventListener("click", Faux);
+document.getElementById("reponse_3").addEventListener("click", Bon);
+document.getElementById("reponse_4").addEventListener("click", Faux);
+}
+
+if (verifier == 9) {
+document.getElementById("question").innerHTML=question_9
+document.getElementById("reponse_1").value="0"
+document.getElementById("reponse_2").value="1"
+document.getElementById("reponse_3").value="2"
+document.getElementById("reponse_4").value="3"
+
+document.getElementById("reponse_1").addEventListener("click", Faux);
+document.getElementById("reponse_2").addEventListener("click", Faux);
+document.getElementById("reponse_3").addEventListener("click", Faux);
+document.getElementById("reponse_4").addEventListener("click", Bon);
+}
+ if (verifier == 8) {
+document.getElementById("question").innerHTML=question_8
+document.getElementById("reponse_1").value="Test de Grossese"
+document.getElementById("reponse_2").value="Test D'Alan Turing"
+document.getElementById("reponse_3").value="Test de cryptographie"
+document.getElementById("reponse_4").value="Test de QI"
+
+document.getElementById("reponse_1").addEventListener("click", Faux);
+document.getElementById("reponse_2").addEventListener("click", Bon);
+document.getElementById("reponse_3").addEventListener("click", Faux);
+document.getElementById("reponse_4").addEventListener("click", Faux);
+}
+if (verifier == 7) {
+document.getElementById("question").innerHTML=question_7
+document.getElementById("reponse_1").value="Addition"
+document.getElementById("reponse_2").value="Force brute"
+document.getElementById("reponse_3").value="La magie"
+document.getElementById("reponse_4").value="Substitution"
+
+document.getElementById("reponse_1").addEventListener("click", Faux);
+document.getElementById("reponse_2").addEventListener("click", Faux);
+document.getElementById("reponse_3").addEventListener("click", Faux);
+document.getElementById("reponse_4").addEventListener("click", Bon);
+}
+ if (verifier == 6) {
+document.getElementById("question").innerHTML=question_6
+document.getElementById("reponse_1").value="Un nain unijambiste"
+document.getElementById("reponse_2").value="Arthur Scherbius"
+document.getElementById("reponse_3").value="Arthus Biuscher"
+document.getElementById("reponse_4").value="Nathan Hette"
+
+document.getElementById("reponse_1").addEventListener("click", Faux);
+document.getElementById("reponse_2").addEventListener("click", Bon);
+document.getElementById("reponse_3").addEventListener("click", Faux);
+document.getElementById("reponse_4").addEventListener("click", Faux);
+}
+ if (verifier == 5) {
+document.getElementById("question").innerHTML=question_5
+document.getElementById("reponse_1").value="2013"
+document.getElementById("reponse_2").value="1945"
+document.getElementById("reponse_3").value="1234"
+document.getElementById("reponse_4").value="Il a pas encore été reconnu"
+
+document.getElementById("reponse_1").addEventListener("click", Bon);
+document.getElementById("reponse_2").addEventListener("click", Faux);
+document.getElementById("reponse_3").addEventListener("click", Faux);
+document.getElementById("reponse_4").addEventListener("click", Faux);
+}
+ if (verifier == 4) {
+document.getElementById("question").innerHTML=question_4
+document.getElementById("reponse_1").value="Les Allemands"
+document.getElementById("reponse_2").value="Les Chinois"
+document.getElementById("reponse_3").value="Le luxembourg"
+document.getElementById("reponse_4").value="L'anglettere"
+
+document.getElementById("reponse_1").addEventListener("click", Faux);
+document.getElementById("reponse_2").addEventListener("click", Faux);
+document.getElementById("reponse_3").addEventListener("click", Faux);
+document.getElementById("reponse_4").addEventListener("click", Bon);
+}
+ if (verifier == 3) {
+document.getElementById("question").innerHTML=question_3
+document.getElementById("reponse_1").value="Une machine a laver"
+document.getElementById("reponse_2").value="Le premier ordinateur"
+document.getElementById("reponse_3").value="Une machine de cryptage"
+document.getElementById("reponse_4").value="Une enigme"
+
+document.getElementById("reponse_1").addEventListener("click", Faux);
+document.getElementById("reponse_2").addEventListener("click", Faux);
+document.getElementById("reponse_3").addEventListener("click", Bon);
+document.getElementById("reponse_4").addEventListener("click", Faux);
+}
+
+if (verifier == 2) {
+document.getElementById("question").innerHTML=question_2
+document.getElementById("reponse_1").value="Il a crée une machine qui travaille comme 10 000 hommes"
+document.getElementById("reponse_2").value="Il a mis de l'eau sur ENIGMA"
+document.getElementById("reponse_3").value="Il a détruit les plans d'ENIGMA"
+document.getElementById("reponse_4").value="Il a détruit les usines de fabrication d'ENIGMA"
+
+document.getElementById("reponse_1").addEventListener("click", Bon);
+document.getElementById("reponse_2").addEventListener("click", Faux);
+document.getElementById("reponse_3").addEventListener("click", Faux);
+document.getElementById("reponse_4").addEventListener("click", Faux);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+</script>
+</body></html>	

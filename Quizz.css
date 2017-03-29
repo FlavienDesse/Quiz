@@ -1,0 +1,95 @@
+html {
+height: 100%;
+background-color: black;
+color : black;
+}
+
+h1{
+margin-top:10px;
+font-size:50pt; 
+font-family:Calibri;  
+text-align:center;
+margin-left:10px;
+margin-right:10px;
+}
+
+.quizz{
+margin-top:100px;
+background-color: white;
+font-family:Calibri; 
+font-size:30pt;
+width : 70%;
+height : 40%;
+border: 5px groove black ;  
+margin-left:auto;
+margin-right:auto;	
+}
+
+#reponse_1{
+margin-left:30px;	
+position:absolute;
+}
+#reponse_2{
+margin-left:670px;	
+position:absolute;	
+}
+#reponse_3{
+margin-left:30px;
+position:absolute;
+margin-top:50px;
+}
+#reponse_4{
+margin-left:670px;	
+position:absolute;	
+margin-top:50px;
+}
+
+
+.bouton{
+    position:absolute;
+	-moz-border-radius:13px;
+	-webkit-border-radius:13px;
+	border:3px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:6px 24px;
+	background-color:#dcdcdc;
+}
+
+#suivant {
+	-moz-border-radius:13px;
+	-webkit-border-radius:13px;
+	border:3px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	margin-top:150px;
+
+}
+#suivant:hover {
+	background-color:transparent;
+}
+#suivant:active {
+	position:relative;
+	top:1px;
+}
+.bouton_suivant{
+text-align:center;
+margin-bottom:10px;
+}
+
+#fin{
+display:none;
+font-size:50pt; 
+padding-top:10px;
+text-align:center;	
+	
+}
